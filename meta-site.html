@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr" data-fr-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expérience : L'Inaccessibilité Numérique | accessibilite.numerique.gouv.fr</title>
+    <link href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.1/dist/dsfr.min.css" rel="stylesheet">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.1/dist/dsfr.module.min.js"></script>
+    <style>
+        body {
+            padding: 0 0 2rem;
+        }
+
+        .mission-card {
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            background: #f6f6f6;
+        }
+
+        .mission-done {
+            border-left: 4px solid #000091;
+            background: #e8edff;
+        }
+    </style>
+</head>
+
+<body>
+    <header role="banner" class="fr-header">
+        <div class="fr-header__body">
+            <div class="fr-container">
+                <div class="fr-header__body-row">
+                    <div class="fr-header__brand fr-enlarge-link">
+                        <div class="fr-header__brand-top">
+                            <div class="fr-header__logo">
+                                <p class="fr-logo">République<br>Française</p>
+                            </div>
+                            <div class="fr-header__navbar">
+                                <button class="fr-btn--menu fr-btn" data-fr-opened="false"
+                                    aria-controls="modal-header-menu" aria-haspopup="menu" id="button-menu"
+                                    title="Menu">
+                                    Menu
+                                </button>
+                            </div>
+                        </div>
+                        <div class="fr-header__service">
+                            <a href="meta-site.html" title="Accueil - Accessibilité numérique">
+                                <p class="fr-header__service-title">Accessibilité numérique</p>
+                                <p class="fr-header__service-tagline">accessibilite.numerique.gouv.fr</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fr-header__menu fr-modal" id="modal-header-menu" aria-labelledby="button-menu">
+            <div class="fr-container">
+                <button class="fr-btn--close fr-btn" aria-controls="modal-header-menu" title="Fermer">Fermer</button>
+                <div class="fr-header__menu-links"></div>
+
+                <nav class="fr-nav" id="navigation-main" role="navigation" aria-label="Menu principal">
+                    <ul class="fr-nav__list">
+                        <li class="fr-nav__item">
+                            <a class="fr-nav__link" href="#" target="_self">Accueil</a>
+                        </li>
+                        <li class="fr-nav__item">
+                            <button class="fr-nav__btn" aria-expanded="false"
+                                aria-controls="menu-obligations">Obligations légales</button>
+                            <div class="fr-collapse fr-menu" id="menu-obligations">
+                                <ul class="fr-menu__list">
+                                    <li><a class="fr-nav__link" href="#">Notion d’accessibilité numérique</a></li>
+                                    <li><a class="fr-nav__link" href="#">Rappel du champ d’application</a></li>
+                                    <li><a class="fr-nav__link" href="#">Évaluation de la conformité à la norme de référence</a></li>
+                                    <li><a class="fr-nav__link" href="#">Déclaration d’accessibilité</a></li>
+                                    <li><a class="fr-nav__link" href="#">Schéma pluriannuel de mise en accessibilité</a></li>
+                                    <li><a class="fr-nav__link" href="#">Mentions et pages obligatoires</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="fr-nav__item">
+                            <button class="fr-nav__btn" aria-expanded="false" aria-controls="menu-methode">Méthode
+                                technique</button>
+                            <div class="fr-collapse fr-menu" id="menu-methode">
+                                <ul class="fr-menu__list">
+                                    <li><a class="fr-nav__link" href="#">Introduction</a></li>
+                                    <li><a class="fr-nav__link" href="#">Critères et tests</a></li>
+                                    <li><a class="fr-nav__link" href="#">Glossaire</a></li>
+                                    <li><a class="fr-nav__link" href="#">Environnement de test</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="fr-nav__item">
+                            <button class="fr-nav__btn" aria-expanded="false"
+                                aria-controls="menu-ressources">Ressources</button>
+                            <div class="fr-collapse fr-menu" id="menu-ressources">
+                                <ul class="fr-menu__list">
+                                    <li><a class="fr-nav__link" href="#">Documents de référence</a></li>
+                                    <li><a class="fr-nav__link" href="#">Kit d’audit</a></li>
+                                    <li><a class="fr-nav__link" href="#">Méthodologie de test</a></li>
+                                    <li><a class="fr-nav__link" href="#">Critères AAA</a></li>
+                                    <li><a class="fr-nav__link" href="#">Exemple de déclaration d’accessibilité</a></li>
+                                    <li><a class="fr-nav__link" href="#">Notes de révision du RGAA 4.1 vers 4.1.2</a></li>
+                                    <li><a class="fr-nav__link" href="#">Notes de révision du RGAA 4.0 vers 4.1</a></li>
+                                    <li><a class="fr-nav__link" href="#">Questions</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="fr-nav__item">
+                            <button class="fr-nav__btn" aria-expanded="true" aria-controls="menu-experience">Atelier
+                                Immersif</button>
+                            <div class="fr-collapse fr-menu" id="menu-experience">
+                                <ul class="fr-menu__list">
+                                    <li><a class="fr-nav__link" href="meta-site.html" aria-current="page">Suivi des
+                                            Missions</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="fr-container fr-mt-4w">
+        <h1>"Quand les sites internet vous sont inadaptés."</h1>
+
+        <button onclick="resetExperience()" class="fr-btn fr-btn--secondary fr-mb-2w">🔄 Recommencer l'expérience à
+            zéro</button>
+
+        <p>Bienvenue dans cette expérience immersive sur le thème de l'inaccessibilité numérique. Dans cette dernière,
+            vous souhaitez organiser un week-end en&nbspAuvergne-Rhône-Alpes afin de vous ressourcer. Votre première
+            mission sera :</p>
+
+        <div id="error-alert" style="display: none;"></div>
+
+        <div id="missions-container"></div>
+    </main>
+
+    <script>
+        // 1. Détecter la tentative depuis l'URL
+        const urlParams = new URLSearchParams(window.location.search);
+        let missionTentee = 0;
+
+        // On convertit les clics en numéros de mission
+        if (urlParams.get('ville') === 'clermont-ferrand' || urlParams.get('mission') === '1') {
+            missionTentee = 1;
+        } else if (urlParams.get('mission') === '2') {
+            missionTentee = 2;
+        } else if (urlParams.get('mission') === '3') {
+            missionTentee = 3;
+        } else if (urlParams.get('mission') === '4') {
+            missionTentee = 4;
+        } else if (urlParams.get('mission') === '5') {
+            missionTentee = 5;
+        } else if (urlParams.get('mission') === '6') {
+            missionTentee = 6;
+        }
+
+        // 2. Récupérer la progression actuelle en mémoire
+        let progression = parseInt(localStorage.getItem('progression') || '0');
+
+        // 3. LE VERROU STRICT DE SÉCURITÉ
+        if (missionTentee > 0) {
+            if (missionTentee === progression + 1) {
+                // C'est la bonne mission dans le bon ordre ! On la valide.
+                progression = missionTentee;
+                localStorage.setItem('progression', progression);
+            } else if (missionTentee > progression + 1) {
+                // Tentative de sauter des étapes (Triche / Clic au hasard)
+                if (document.getElementById('error-alert')) {
+                    document.getElementById('error-alert').style.display = 'block';
+                }
+            }
+            // On efface l'URL pour ne pas bloquer les futurs rafraîchissements
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+
+        // 4. Affichage de l'interface
+        function render() {
+            const container = document.getElementById('missions-container');
+            let html = '';
+
+            // --- ÉTAPE 0 : Départ ---
+            if (progression === 0) {
+                html += `
+                <section class="mission-card">
+                    <h3>Mission 1 : Choisir une destination</h3>
+                    <p>Il vous faut tout d’abord trouver quelle ville visiter en premier grâce à ce site d'information.</p>
+                            
+                    <p><strong>Indice :</strong> Vous êtes un grand fan des édifices gothiques.</p>
+                    <a href="journal.html" class="fr-btn">Consulter le journal régional</a>
+                    <p><em>Une fois trouvée, cliquez sur le nom de la ville pour valider et revenir ici.</em></p>
+                </section>`;
+            }
+
+            // --- ÉTAPES VALIDÉES ---
+            if (progression >= 1) html += `<section class="mission-card mission-done"><h3>✅ Mission 1 : Destination choisie (Clermont-Ferrand)</h3></section>`;
+            if (progression >= 2) html += `<section class="mission-card mission-done"><h3>✅ Mission 2 : Restaurant trouvé (Brasserie des Puys)</h3></section>`;
+            if (progression >= 3) html += `<section class="mission-card mission-done"><h3>✅ Mission 3 : Activité trouvée (Puy de Dôme)</h3></section>`;
+            if (progression >= 4) html += `<section class="mission-card mission-done"><h3>✅ Mission 4 : Événement trouvé (Jazz à Vienne)</h3></section>`;
+            if (progression >= 5) html += `<section class="mission-card mission-done"><h3>✅ Mission 5 : Trajet réservé</h3></section>`;
+            if (progression >= 6) html += `<section class="mission-card mission-done"><h3>✅ Mission 6 : Trajet réservé</h3></section>`;
+
+            // --- PROCHAINE ÉTAPE À AFFICHER ---
+            const next = progression + 1;
+            if (next === 2) {
+                html += `<section class="mission-card">
+                    <h3>Mission 2 : Trouver un restaurant</h3>
+                    <p>Bravo ! Maintenant, il vous faut manger. Pour cela, trouvez un restaurant dans lequel vous pourrez déguster un bon morceau de viande salée.</p>
+                    <a href="journal.html?progression=1" class="fr-btn">Retourner au journal</a>
+                </section>`;
+            } else if (next === 3) {
+                html += `<section class="mission-card">
+                    <h3>Mission 3 : Trouver une activité</h3>
+                    <p>Parfait ! Suite à ce bon repas, trouvez maintenant une activité à faire dans le coin.</p>
+                    <p><strong>Indice :</strong><em> Une balade digestive ne fera pas de mal.</em></p>
+                    <a href="journal.html?progression=2" class="fr-btn">Retourner au journal</a>
+                </section>`;
+            } else if (next === 4) {
+                html += `<section class="mission-card">
+                    <h3>Mission 4 : Événement régional</h3>
+                    <p>Bien joué. Après tout ça, il serait intéressant d’aller à un événement régional mettant en avant le quatrième art.</p>
+                    <a href="journal.html?progression=3" class="fr-btn">Retourner au journal</a>
+                </section>`;
+            } else if (next === 5) {
+                html += `<section class="mission-card">
+                    <h3>Mission 5 : En avant pour votre week-end !</h3>
+                    <p>Félicitations ! Une fois les principaux jalons de votre week-end fixés, vous devez maintenant chercher un train pour partir de Grenoble jusqu'à votre destination via le site SNoCF.</p>
+                    <p><strong>Indice :</strong><em> Soyez à l'heure pour le déjeuner !</em></p>
+                    <a href="Train.html" class="fr-btn">Accéder au site SNoCF</a>                    
+                </section>`;
+            } else if (next === 6) {
+                html += `<section class="mission-card">
+                    <h3>Mission 6 : Direction le théatre antique </h3>
+                    <p>Dernière étape ! Vous devez maintenant chercher un train pour vous rendre à l'évenement musicale, en partant de <strong>Clermont-Ferrand</strong> sur le site SNoCF.</p>
+                    <a href="Train.html" class="fr-btn">Accéder au site SNoCF</a>
+                </section>`;
+            } else if (progression === 6) {
+                // --- ÉCRAN DE FIN ---
+                html += `<section class="mission-card" style="background: #e8edff; border: 2px solid #000091; text-align: center;">
+                    <h2 style="color: #000091; margin-bottom: 1rem;">🎉 Félicitations !</h2>
+                    <p>Vous avez terminé toutes les missions de cet atelier immersif.</p>
+                    <p>Vous avez pu expérimenter de manière concrète comment une navigation inadaptée, un manque de contraste ou des interactions complexes peuvent rendre l'utilisation d'un site longue, frustrante, voire impossible.</p>
+                </section>
+                <p><strong>Durant cette expérience, vous avez du vous rendre compte des difficultés suivantes :</strong>
+                    <ul> 
+                        <li>Un manque d'information dû à l'absence d'accès aux informations visuelle, </li>
+                        <li>Des boutons inconnu,</li>
+                        <li>Une architecture anarchique,</li>
+                        <li>De la fatigue cognitive,</li>
+                        <li>Une mise en page rigide,</li>
+                        <li>Des solutions impertinante,</li>
+                        <li>Un langage technique innacessible.</li>
+                    </ul>
+
+                Ces difficultés ont toutes déjà était vécu par les personnes malvoyantes ou non-voyantes. Et ceux encore aujourd'hui, à l'aire du "tout numérique".
+                <br>Alors si vous concevez ou prévoyer de concevoir un site internet, prenez en compte l'accessibilité numérique dès le départ en vous entourant de professionel et en vous renseignant avec les sources suivantes :
+                <ul>
+                    <li>Pour accessibiliser les images : http://</li>
+                    <li>Pour ce qui est des boutons : </li>
+                    <li>Pour l'architecture : </li>
+                    <li>Pour la rigidité de mise en page : </li>
+                    <li>Pour </li>
+                </ul>
+
+                </p>`;
+            }
+
+            container.innerHTML = html;
+        }
+
+        render();
+
+        // 5. Fonction pour réinitialiser
+        function resetExperience() {
+            localStorage.removeItem('progression');
+            window.location.href = 'meta-site.html'; // Recharge la page proprement
+        }
+    </script>
+</body>
+
+</html>
