@@ -23,6 +23,10 @@
             border-left: 4px solid #000091;
             background: #e8edff;
         }
+
+        .tititre {
+            margin-top: 1.5rem;
+        }
     </style>
 </head>
 
@@ -188,10 +192,11 @@
                 <section class="mission-card">
                     <h3>Mission 1 : Choisir une destination</h3>
                     <p>Il vous faut tout d’abord trouver quelle ville visiter en premier grâce à ce site d'information.</p>
-                            
                     <p><strong>Indice :</strong> Vous êtes un grand fan des édifices gothiques.</p>
-                    <a href="journal.html" class="fr-btn">Consulter le journal régional</a>
+                    <p><strong>Difficulté :</strong> Lors de cette mission, vous serez confronté à une mise en page anarchique.</p>
                     <p><em>Une fois trouvée, cliquez sur le nom de la ville pour valider et revenir ici.</em></p>
+                    <a href="journal.html" class="fr-btn">Consulter le journal régional</a>
+                    
                 </section>`;
             }
 
@@ -209,6 +214,7 @@
                 html += `<section class="mission-card">
                     <h3>Mission 2 : Trouver un restaurant</h3>
                     <p>Bravo ! Maintenant, il vous faut manger. Pour cela, trouvez un restaurant dans lequel vous pourrez déguster un bon morceau de viande salée.</p>
+                    <p><strong>Difficulté :</strong> Lors de cette mission, vous serez confronté à une fatigue cognitive.</p>
                     <a href="journal.html?progression=1" class="fr-btn">Retourner au journal</a>
                 </section>`;
             } else if (next === 3) {
@@ -216,12 +222,14 @@
                     <h3>Mission 3 : Trouver une activité</h3>
                     <p>Parfait ! Suite à ce bon repas, trouvez maintenant une activité à faire dans le coin.</p>
                     <p><strong>Indice :</strong><em> Une balade digestive ne fera pas de mal.</em></p>
+                    <p><strong>Difficulté :</strong> Lors de cette mission, vous serez confronté à la technicité du langage.</p>
                     <a href="journal.html?progression=2" class="fr-btn">Retourner au journal</a>
                 </section>`;
             } else if (next === 4) {
                 html += `<section class="mission-card">
                     <h3>Mission 4 : Événement régional</h3>
                     <p>Bien joué. Après tout ça, il serait intéressant d’aller à un événement régional mettant en avant le quatrième art.</p>
+                    <p><strong>Difficulté :</strong> Lors de cette mission, vous serez confronté à la rigidité de la mise en page.</p>
                     <a href="journal.html?progression=3" class="fr-btn">Retourner au journal</a>
                 </section>`;
             } else if (next === 5) {
@@ -229,6 +237,7 @@
                     <h3>Mission 5 : En avant pour votre week-end !</h3>
                     <p>Félicitations ! Une fois les principaux jalons de votre week-end fixés, vous devez maintenant chercher un train pour partir de Grenoble jusqu'à votre destination via le site SNoCF.</p>
                     <p><strong>Indice :</strong><em> Soyez à l'heure pour le déjeuner !</em></p>
+                    <p><strong>Difficulté :</strong> Lors de cette mission, vous serez confronté à des boutons inconnus, à un manque d’information visuelle et à une solution inappropriée.</p>
                     <a href="Train.html" class="fr-btn">Accéder au site SNoCF</a>                    
                 </section>`;
             } else if (next === 6) {
@@ -239,12 +248,12 @@
                 </section>`;
             } else if (progression === 6) {
                 // --- ÉCRAN DE FIN ---
-                html += `<section class="mission-card" style="background: #e8edff; border: 2px solid #000091; text-align: center;">
-                    <h2 style="color: #000091; margin-bottom: 1rem;">🎉 Félicitations !</h2>
-                    <p>Vous avez terminé toutes les missions de cet atelier immersif.</p>
+                html += `<section class="mission-card" style="background: #e8edff; border: 2px solid #000091;">
+                    <h2 style="color: #000091; margin-bottom: 1rem; text-align: center;">🎉 Félicitations !</h2>
+                    <p style="text-align: center;">Vous avez terminé toutes les missions de cet atelier immersif.</p>
                     <p>Vous avez pu expérimenter de manière concrète comment une navigation inadaptée, un manque de contraste ou des interactions complexes peuvent rendre l'utilisation d'un site longue, frustrante, voire impossible.</p>
-                </section>
-                <p><strong>Durant cette expérience, vous avez du vous rendre compte des difficultés suivantes :</strong>
+                <h3 class="tititre">Durant cette expérience, vous avez du vous rendre compte des difficultés suivantes :</h3>
+                <p>
                     <ul> 
                         <li>Un manque d'information dû à l'absence d'accès aux informations visuelle, </li>
                         <li>Des boutons inconnu,</li>
@@ -265,7 +274,8 @@
                     <li>Pour des tests de personna : </li>
                 </ul>
 
-                </p>`;
+                </p>
+                </section>`;
             }
 
             container.innerHTML = html;
