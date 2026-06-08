@@ -307,7 +307,9 @@
                     <p>Au même titre que les images, il est important de bien nommer ses boutons afin que les usagers utilisant un lecteur d’écran ne se retrouvent pas face à un bouton dont ils ne connaissent pas la fonction. Pour cela, il faut ajouter l’attribut <code class="dsfr-doc-inline-code">aria-label</code>, qui permet d’associer un texte descriptif à un élément HTML afin que les lecteurs d’écran puissent décrire la fonction du bouton à l’utilisateur.</p>
                     
                     <div class="demo">
-                        <button type="button" class="fr-btn" aria-label="Ajouter au panier"></button>
+                        <button type="button" class="fr-btn fr-btn--icon-only" aria-label="Ajouter au panier">
+                        <img src="add-to-cart.svg" alt="" style="width: 1.25rem; height: 1.25rem; filter: brightness(0) invert(1);">
+                        </button>
                         <p>
                             <code class="dsfr-doc-inline-code">&lt;button type="button" class="fr-btn" aria-label="Ajouter au panier"&gt;&lt;img src="btn.png"&gt; &lt;/button&gt;</code>
                          </P>
