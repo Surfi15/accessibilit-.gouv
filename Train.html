@@ -592,10 +592,10 @@
                 return;
             }
 
-            // Vérification stricte des gares et des horaires pour la mission 5
+            // Vérification stricte des gares et des horaires pour la mission 3
             if (gareDepart === "Grenoble" && gareArrivee === "Clermont-Ferrand") {
                 if (trainSelectionne.heure === "06:05" || trainSelectionne.heure === "08:12") {
-                    window.location.href = "index.html?mission=5";
+                    window.location.href = "index.html?mission=3";
                 } else {
                     // Si le trajet est bon mais pas l'horaire, on affiche juste l'écran succès classique sans valider la mission
                     changerPage('page-succes');

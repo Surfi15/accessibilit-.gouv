@@ -206,9 +206,9 @@
             // --- ÉTAPES VALIDÉES ---
             if (progression >= 1) html += `<section class="mission-card mission-done"><h3>✅ Mission 1 : Destination choisie (Clermont-Ferrand)</h3></section>`;
             if (progression >= 2) html += `<section class="mission-card mission-done"><h3>✅ Mission 2 : Restaurant trouvé (Brasserie des Puys)</h3></section>`;
-            if (progression >= 3) html += `<section class="mission-card mission-done"><h3>✅ Mission 3 : Activité trouvée (Puy de Dôme)</h3></section>`;
-            if (progression >= 4) html += `<section class="mission-card mission-done"><h3>✅ Mission 4 : Événement trouvé (Jazz à Vienne)</h3></section>`;
-            if (progression >= 5) html += `<section class="mission-card mission-done"><h3>✅ Mission 5 : Trajet réservé</h3></section>`;
+            if (progression >= 3) html += `<section class="mission-card mission-done"><h3>✅ Mission 3 : Trajet réservé</h3></section>`;
+            if (progression >= 4) html += `<section class="mission-card mission-done"><h3>✅ Mission 4 : Activité trouvée (Puy de Dôme)</h3></section>`;
+            if (progression >= 5) html += `<section class="mission-card mission-done"><h3>✅ Mission 5 : Événement trouvé (Jazz à Vienne)</h3></section>`;            
             if (progression >= 6) html += `<section class="mission-card mission-done"><h3>✅ Mission 6 : Trajet réservé</h3></section>`;
 
             // --- PROCHAINE ÉTAPE À AFFICHER ---
@@ -222,26 +222,26 @@
                 </section>`;
             } else if (next === 3) {
                 html += `<section class="mission-card">
-                    <h3>Mission 3 : Trouver une activité</h3>
-                    <p>Parfait ! Suite à ce bon repas, trouvez maintenant une activité à faire à Clermont-Ferrand.</p>
-                    <p><strong>Indice :</strong><em> Une balade digestive ne fera pas de mal.</em></p>
-                    <p><strong>Difficulté :</strong> Lors de cette mission, vous serez confronté à la technicité du langage.</p>
-                    <a href="journal.html?progression=2" class="fr-btn">Retourner au journal</a>
-                </section>`;
-            } else if (next === 4) {
-                html += `<section class="mission-card">
-                    <h3>Mission 4 : Événement régional</h3>
-                    <p>Bien joué. Après tout ça, il serait intéressant d’aller à un événement régional mettant en avant le quatrième art.</p>
-                    <p><strong>Difficulté :</strong> Lors de cette mission, vous serez confronté à la rigidité de la mise en page.</p>
-                    <a href="journal.html?progression=3" class="fr-btn">Retourner au journal</a>
-                </section>`;
-            } else if (next === 5) {
-                html += `<section class="mission-card">
-                    <h3>Mission 5 : En avant pour votre week-end !</h3>
+                    <h3>Mission 3 : En avant pour votre week-end !</h3>
                     <p>Félicitations ! Maintenant que vous avez choisi une destination et un lieu pour vous restaurer, et que <strong>vous êtes à Grenoble</strong>, vous devez rechercher un train pour vous y rendre sur le site de la SNoCF, à la date de votre choix.</p>
                     <p><strong>Indice :</strong><em> Soyez à l'heure pour le déjeuner !</em></p>
                     <p><strong>Difficulté :</strong> Lors de cette mission, vous serez confronté à des boutons inconnus, à un manque d’information visuelle et à une solution inadéquate.</p>
                     <a href="Train.html" class="fr-btn">Accéder au site SNoCF</a>                    
+                </section>`;
+            } else if (next === 4) {
+                html += `<section class="mission-card">
+                    <h3>Mission 4 : Trouver une activité</h3>
+                    <p>Parfait ! Suite à ce bon repas, trouvez maintenant une activité à faire à Clermont-Ferrand.</p>
+                    <p><strong>Indice :</strong><em> Une balade digestive ne fera pas de mal.</em></p>
+                    <p><strong>Difficulté :</strong> Lors de cette mission, vous serez confronté à la technicité du langage.</p>
+                    <a href="journal.html?progression=3" class="fr-btn">Retourner au journal</a>
+                </section>`;
+            } else if (next === 5) {
+                html += `<section class="mission-card">
+                    <h3>Mission 5 : Événement régional</h3>
+                    <p>Bien joué ! Après tout cela, il serait intéressant d’assister à un événement régional mettant en avant le quatrième art dans une autre ville.</p>
+                    <p><strong>Difficulté :</strong> Lors de cette mission, vous serez confronté à la rigidité de la mise en page.</p>
+                    <a href="journal.html?progression=4" class="fr-btn">Retourner au journal</a>
                 </section>`;
             } else if (next === 6) {
                 html += `<section class="mission-card">
