@@ -27,6 +27,10 @@
         .tititre {
             margin-top: 1.5rem;
         }
+
+        .image-demo{
+            margin: 1rem;
+        }
     </style>
 </head>
 
@@ -231,7 +235,7 @@
             } else if (next === 4) {
                 html += `<section class="mission-card">
                     <h3>Mission 4 : Trouver une activité</h3>
-                    <p>Parfait ! Suite à ce bon repas, trouvez maintenant une activité à faire à Clermont-Ferrand.</p>
+                    <p>Parfait ! Une fois le train réservé, il serait bien de trouver une activité à faire à Clermont-Ferrand après ce bon repas.</p>
                     <p><strong>Indice :</strong><em> Une balade digestive ne fera pas de mal.</em></p>
                     <p><strong>Difficulté :</strong> Lors de cette mission, vous serez confronté à la technicité du langage.</p>
                     <a href="journal.html?progression=3" class="fr-btn">Retourner au journal</a>
@@ -245,7 +249,7 @@
                 </section>`;
             } else if (next === 6) {
                 html += `<section class="mission-card">
-                    <h3>Mission 6 : Direction le théatre antique </h3>
+                    <h3>Mission 6 : Direction le théâtre antique </h3>
                     <p>Dernière étape ! Vous devez maintenant chercher un train pour vous rendre à l’événement musical précédemment sélectionné, en partant de <strong>Clermont-Ferrand</strong>, sur le site SNoCF, à la date et à l’heure de votre choix.</p>
                     <a href="Train.html" class="fr-btn">Accéder au site SNoCF</a>
                 </section>`;
@@ -257,7 +261,9 @@
                     <p>Vous avez pu expérimenter de manière concrète comment une navigation inadaptée, un manque de contraste ou des interactions complexes peuvent rendre l'utilisation d'un site longue, frustrante, voire impossible.</p>
                 <h2 class="tititre">Durant cette expérience, vous avez pu vous rendre compte des difficultés suivantes :</h2> 
                     <h3>Un manque d'information dû à l'absence d'accès aux informations visuelles.</h3>
-                    <p>En effet, vous avez pu expérimenter l'absence d'images, ou plutôt leur inaccessibilité. Pour les personnes malvoyantes ou non voyantes, il s'agit d'une problématique quotidienne. Lorsqu'un site web ne met pas en place de textes alternatifs, aussi appelés « alt », pour ses images, il exclut alors les utilisateurs atteints d'une déficience visuelle.</p>
+                    <p>En effet, vous avez pu expérimenter, durant toutes les missions, l'absence d'images, ou plutôt leur inaccessibilité. Pour les personnes malvoyantes ou non voyantes, il s'agit d'une problématique quotidienne. Lorsqu'un site web ne met pas en place de textes alternatifs, aussi appelés « alt », pour ses images, il exclut alors les utilisateurs atteints d'une déficience visuelle. L’attribut <code>alt</code> doit proposer une description succincte et précise de l’image.</p>
+                    <img class="image-demo" src="Image_Puy_de_Dôme.jpg" alt="Vue aérienne du puy de Dôme.">
+                    <p><code><img class="image-demo" src="Image_Puy_de_Dôme.jpg" alt="Vue aérienne du puy de Dôme."></code></p>
                     <h3>Des boutons inconnus.</h3>
                     <p>Au même titre que les images, il est important de bien nommer ses boutons afin que les usagers utilisant un lecteur d’écran ne se retrouvent pas face à un bouton dont ils ne connaissent pas la fonction.</p>
                     <h3>Une architecture anarchique.</h3>
