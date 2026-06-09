@@ -49,6 +49,26 @@
             vertical-align: middle;
         }
 
+        .dsfr-doc-code-block {
+            font-family: var(--font-mono, Menlo, Monaco, Consolas, monospace);
+            font-size: 0.875em;
+            font-weight: 500;
+
+            /* Couleurs conformes à votre charte grey alt du DSFR */
+            background-color: var(--background-alt-grey);
+            color: #b34000;
+
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+            border: 1px solid var(--border-default-grey);
+            
+            /* Permet de conserver les retours à la ligne et les espaces du code */
+            white-space: pre; 
+            overflow-x: auto; /* Ajoute une barre de défilement horizontal si le code dépasse */
+            display: block;
+        }
+
         .demo {
             display: flex;
             align-items: center;
@@ -317,7 +337,22 @@
 
                     <h3>Une architecture anarchique.</h3>
                     <p>Les sites web dotés d’une architecture anarchique représentent une minorité sur Internet, mais il est cependant important de bien organiser son site afin que la navigation soit simplifiée et fluidifiée pour tous les utilisateurs.</p>
-                    <pclass="dsfr-doc-inline-code"><code>&lt;!DOCTYPE html&gt;<br>&lt;html lang="fr"&gt;<br>&lt;head&gt;<br>&lt;meta charset="UTF-8"&gt;<br>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>&lt;title&gt;&lt;/title&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>&lt;h1&gt;&lt;/h1&gt;<br>&lt;p&gt;&lt;/p&gt;<br>&lt;h2&gt;&lt;/h2&gt;<br>&lt;p&gt;&lt;/p&gt;<br>&lt;h2&gt;&lt;/h2&gt;<br>&lt;p&gt;&lt;/p&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></p>
+                   <pre class="dsfr-doc-code-block"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;&lt;/h1&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;h2&gt;&lt;/h2&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;h2&gt;&lt;/h2&gt;
+    &lt;p&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 
                     <h3>De la fatigue cognitive.</h3>
                     <p>Lors de la mission numéro deux, vous avez pu expérimenter une fatigue cognitive visuelle causée par une typographie et des lettres changeantes. Pour les personnes utilisant un lecteur d’écran, la fatigue cognitive est causée par la voix qui lit la page. Selon les modèles de synthèse vocale, elle peut apparaître plus ou moins rapidement. Pour éviter cela, il est important d’être concis dans le contenu du site.</p>
@@ -337,7 +372,6 @@
                 <li><span><a href="https://www.w3.org/WAI/ARIA/apg/" target="_blank">ARIA Authoring Practices Guide</a></span></li>
                 <li><span><a href="https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA" target="_blank">Documentation MDN (ARIA)</a></span></li>                
                 </ul>
-
                 </p>
                 </section>`;
             }
