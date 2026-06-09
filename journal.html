@@ -419,11 +419,85 @@
             margin-top: 50px;
             font-size: 0.9rem;
         }
+
+        /* --- BOUTON ET MODALE DE RAPPEL DE MISSION --- */
+        .mission-help-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 45px;
+            height: 45px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1000;
+            /* Reste au-dessus du header */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .mission-help-btn:hover {
+            transform: scale(1.1);
+            background-color: var(--secondary);
+        }
+
+        #mission-help-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(3px);
+            display: none;
+            /* Masqué par défaut */
+            justify-content: center;
+            align-items: center;
+            z-index: 10001;
+            /* Au-dessus de tout, même des cookies */
+        }
+
+        #mission-help-popup {
+            background: white;
+            padding: 30px;
+            max-width: 450px;
+            width: 90%;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        #mission-help-popup h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        #mission-help-popup p {
+            color: #555;
+            font-size: 1.05rem;
+        }
     </style>
 </head>
 
 <body>
+    <button class="mission-help-btn" onclick="showMissionHelp()" title="Rappel de la mission">?</button>
 
+    <div id="mission-help-overlay" onclick="closeMissionHelp()">
+        <div id="mission-help-popup" onclick="event.stopPropagation()">
+            <h3 id="mission-help-title">Votre Mission</h3>
+            <p id="mission-help-text"></p>
+            <div class="cookie-buttons" style="margin-top: 20px;">
+                <button class="cookie-btn accept" onclick="closeMissionHelp()">J'ai compris</button>
+            </div>
+        </div>
+    </div>
     <div id="cookie-overlay">
         <div id="cookie-popup">
             <h3>Respect de votre vie privée</h3>
@@ -971,6 +1045,36 @@
             if (evenement === 'Jazz' && progression === 4) {
                 window.location.href = 'index.html?mission=5';
             }
+        }
+
+        // --- GESTION DU BOUTON D'AIDE ---
+        function showMissionHelp() {
+            const titleEl = document.getElementById('mission-help-title');
+            const textEl = document.getElementById('mission-help-text');
+
+            // On adapte le texte affiché selon la progression de l'URL
+            if (progression === 0) {
+                titleEl.innerText = "Mission 1 : Choisir une destination";
+                textEl.innerHTML = "Trouvez quelle ville visiter en premier.<br><strong>Indice :</strong> Vous êtes un grand fan des édifices gothiques.<br><strong>Cliquez sur le nom pour valider.</strong>";
+            } else if (progression === 1) {
+                titleEl.innerText = "Mission 2 : Trouver un restaurant";
+                textEl.innerHTML = "Trouvez un restaurant dans lequel vous pourrez déguster un bon morceau de viande salée.<br><strong>Cliquez sur le nom pour valider.</strong>";
+            } else if (progression === 3) {
+                titleEl.innerText = "Mission 4 : Trouver une activité";
+                textEl.innerHTML = "Trouvez une activité à faire à Clermont-Ferrand.<br><br><strong>Indice :</strong> Une balade digestive ne fera pas de mal.<br><strong>Cliquez sur le nom pour valider.</strong>";
+            } else if (progression === 4) {
+                titleEl.innerText = "Mission 5 : Événement régional";
+                textEl.innerHTML = "Trouvez l'événement régional incontournable mettant en avant le quatrième art.<br><strong>Cliquez sur le nom pour valider.</strong>";
+            } else {
+                titleEl.innerText = "Information";
+                textEl.innerHTML = "Vous n'avez aucune mission active nécessitant le journal pour le moment. Consultez la page d'accueil de l'expérience.<br><strong>Cliquez sur le nom pour valider.</strong>";
+            }
+
+            document.getElementById('mission-help-overlay').style.display = 'flex';
+        }
+
+        function closeMissionHelp() {
+            document.getElementById('mission-help-overlay').style.display = 'none';
         }
 
 
