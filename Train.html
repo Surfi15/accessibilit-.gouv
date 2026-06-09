@@ -63,6 +63,7 @@
                 opacity: 0;
                 transform: translateY(10px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -131,7 +132,7 @@
         }
 
         button:hover {
-             background-color: #00000000;
+            background-color: #00000000;
         }
 
         .train-option {
@@ -222,7 +223,7 @@
             position: relative;
             width: 160px;
             height: 50px;
-            background: #000000; 
+            background: #000000;
             overflow: hidden;
             border-radius: 4px;
         }
@@ -231,8 +232,8 @@
             display: block;
             width: 100%;
             height: 100%;
-            pointer-events: none; 
-            opacity: 0; 
+            pointer-events: none;
+            opacity: 0;
         }
 
         .accessibility-trigger {
@@ -255,6 +256,15 @@
             background: #4a5568;
         }
 
+        .accessibility-trigger.active {
+            background: #869abd !important;
+            /* Devient vert vif */
+            color: #fff !important;
+            font-weight: bold;
+            box-shadow: 0 0 0 2px #fff, 0 0 0 4px #869abd;
+            /* Double contour de focus très visible */
+        }
+
         .success-box {
             text-align: center;
             color: var(--primary);
@@ -272,7 +282,8 @@
     <div id="cookie-popup" class="cookie-backdrop">
         <div class="cookie-modal">
             <h3>🍪 Gestion des cookies - SNoCF</h3>
-            <p>Pour continuer vers notre simulateur de réservation <strong>SNoCF</strong>, veuillez accepter les cookies ci-dessous.</p>
+            <p>Pour continuer vers notre simulateur de réservation <strong>SNoCF</strong>, veuillez accepter les cookies
+                ci-dessous.</p>
             <div class="cookie-buttons">
                 <button class="btn-cookie" onclick="closeCookies()"></button>
                 <button class="btn-cookie" onclick="closeCookies()"></button>
@@ -337,26 +348,30 @@
         </section>
 
         <section id="page-date" class="page">
-            <button onclick="changerPage('page-accueil')" style="width: auto; margin-bottom: 1rem; background: #718096;">⬅ Retour</button>
+            <button onclick="changerPage('page-accueil')"
+                style="width: auto; margin-bottom: 1rem; background: #718096;">⬅ Retour</button>
             <div class="card">
                 <h2 id="titre-date-trajet" style="margin-bottom: 1.5rem;">Choisir votre date de voyage</h2>
                 <div style="margin-bottom: 1.5rem;">
                     <label for="date-voyage">Date de départ</label>
                     <input type="date" id="date-voyage" required>
                 </div>
-                <button onclick="afficherHoraires()" style="background-color: var(--primary);">Voir les horaires disponibles</button>
+                <button onclick="afficherHoraires()" style="background-color: var(--primary);">Voir les horaires
+                    disponibles</button>
             </div>
         </section>
 
         <section id="page-resultats" class="page">
-            <button onclick="changerPage('page-date')" style="width: auto; margin-bottom: 1rem; background: #718096;">⬅ Retour</button>
+            <button onclick="changerPage('page-date')" style="width: auto; margin-bottom: 1rem; background: #718096;">⬅
+                Retour</button>
             <h2 id="titre-trajet" style="margin-bottom: 0.5rem;">Trains disponibles</h2>
             <p id="date-recap-resultat" style="margin-bottom: 1.5rem; color: #4a5568; font-weight: bold;"></p>
             <div id="liste-trains"></div>
         </section>
 
         <section id="page-paiement" class="page">
-            <button onclick="changerPage('page-resultats')" style="width: auto; margin-bottom: 1rem; background: #718096;">⬅ Retour aux trains</button>
+            <button onclick="changerPage('page-resultats')"
+                style="width: auto; margin-bottom: 1rem; background: #718096;">⬅ Retour aux trains</button>
 
             <div class="card">
                 <h2>Paiement sécurisé SNoCF (Simulé)</h2>
@@ -391,9 +406,11 @@
                             </div>
                         </div>
                         <div style="flex-grow: 1;">
-                            <input type="text" id="captcha-input" placeholder="Recopier le code" required style="margin-top: 1.5rem;">
+                            <input type="text" id="captcha-input" placeholder="Recopier le code" required
+                                style="margin-top: 1.5rem;">
                         </div>
-                        <button type="button" class="accessibility-trigger" onclick="toggleAccessibilite()">♿ Accès</button>
+                        <button type="button" class="accessibility-trigger" onclick="toggleAccessibilite()">♿
+                            Accès</button>
                     </div>
 
                     <button type="submit" style="background-color: var(--accent);">Confirmer le paiement</button>
@@ -405,8 +422,10 @@
             <div class="card success-box">
                 <div class="success-icon">❌​</div>
                 <h2>Dommage !</h2>
-                <p style="color: #4a5568; margin-top: 1rem;"> Vous avez réservé le mauvais train.<br><strong>Veuillez réessayer.</strong></p>
-                <button onclick="changerPage('page-accueil')" style="margin-top: 2rem; width: auto;">Prendre un autre billet</button>
+                <p style="color: #4a5568; margin-top: 1rem;"> Vous avez réservé le mauvais train.<br><strong>Veuillez
+                        réessayer.</strong></p>
+                <button onclick="changerPage('page-accueil')" style="margin-top: 2rem; width: auto;">Prendre un autre
+                    billet</button>
             </div>
         </section>
 
@@ -451,7 +470,7 @@
         }
 
         function formatEspaceDate(dateStr) {
-            if(!dateStr) return "";
+            if (!dateStr) return "";
             const [year, month, day] = dateStr.split('-');
             return `${day}/${month}/${year}`;
         }
@@ -465,7 +484,7 @@
 
             document.getElementById('titre-trajet').innerText = `Trains de ${gareDepart} vers ${gareArrivee}`;
             document.getElementById('date-recap-resultat').innerText = `Date sélectionnée : ${formatEspaceDate(dateVoyage)}`;
-            
+
             const listeTrains = document.getElementById('liste-trains');
             listeTrains.innerHTML = "";
 
@@ -510,6 +529,7 @@
             `;
 
             modeAccessibilite = false;
+            document.querySelector('.accessibility-trigger').classList.remove('active');
             document.getElementById('captcha-canvas').style.opacity = "0";
             document.getElementById('captcha-wrapper').style.background = "#000000";
 
@@ -524,18 +544,18 @@
                 code += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
             }
             captchaGenere = code;
-            
+
             const canvas = document.getElementById('captcha-canvas');
             const ctx = canvas.getContext('2d');
-            
+
             ctx.fillStyle = "#edf2f7";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
-            
+
             ctx.fillStyle = "#48bb78";
             ctx.font = "bold 24px 'Segoe UI'";
             ctx.textAlign = "center";
             ctx.textBaseline = "middle";
-            
+
             ctx.strokeStyle = "#2d3748";
             ctx.lineWidth = 2;
             ctx.beginPath();
@@ -551,6 +571,10 @@
             modeAccessibilite = !modeAccessibilite;
             const canvas = document.getElementById('captcha-canvas');
             const wrapper = document.getElementById('captcha-wrapper');
+            const btn = document.querySelector('.accessibility-trigger');
+
+            // Ajoute ou supprime la classe .active selon l'état du booléen
+            btn.classList.toggle('active', modeAccessibilite);
 
             if (modeAccessibilite) {
                 canvas.style.opacity = "1";
@@ -567,7 +591,7 @@
         const wrapper = document.getElementById('captcha-wrapper');
         const canvas = document.getElementById('captcha-canvas');
 
-        wrapper.addEventListener('mousemove', function(e) {
+        wrapper.addEventListener('mousemove', function (e) {
             if (!modeAccessibilite) return;
 
             const rect = wrapper.getBoundingClientRect();
@@ -577,7 +601,7 @@
             canvas.style.clipPath = `circle(20px at ${x}px ${y}px)`;
         });
 
-        wrapper.addEventListener('mouseleave', function() {
+        wrapper.addEventListener('mouseleave', function () {
             if (!modeAccessibilite) return;
             canvas.style.clipPath = "circle(0px at 0px 0px)";
         });
